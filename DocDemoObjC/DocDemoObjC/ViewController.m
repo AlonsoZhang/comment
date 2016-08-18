@@ -10,18 +10,35 @@
 
 @interface ViewController ()
 
+/** This property knows my name. */
+@property(nonatomic,strong)NSString*myName;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    self.myName = @"123";
+
+    float ccc= [self toCelcius:123];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(float)toCelcius:(float)fromFahrenheit
+{
+    return (fromFahrenheit-32) / 1.8;
+}
+
+-(float)toFahrenheit:(float)fromCelcius
+{
+    return fromCelcius * 1.8 + 32;
 }
 
 @end
