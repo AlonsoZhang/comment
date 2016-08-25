@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E29DE6321D6E746300D05F5A /* DocDemo */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E29DE6351D6E746400D05F5A /* Build configuration list for PBXAggregateTarget "DocDemo" */;
+			buildPhases = (
+				E29DE6361D6E749900D05F5A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = DocDemo;
+			productName = DocDemo;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		E21415C71D63E58100D9BD14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E21415C61D63E58100D9BD14 /* main.m */; };
 		E21415CA1D63E58100D9BD14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E21415C91D63E58100D9BD14 /* AppDelegate.m */; };
@@ -112,6 +126,9 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8LP5KW6GHL;
 					};
+					E29DE6321D6E746300D05F5A = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = E21415BD1D63E58100D9BD14 /* Build configuration list for PBXProject "DocDemoObjC" */;
@@ -128,6 +145,7 @@
 			projectRoot = "";
 			targets = (
 				E21415C11D63E58100D9BD14 /* DocDemoObjC */,
+				E29DE6321D6E746300D05F5A /* DocDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +162,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E29DE6361D6E749900D05F5A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nheaderdoc2html -o /Users/Alonso/Desktop/doc /Users/Alonso/Desktop/comment/DocDemoObjC\ngatherheaderdoc /Users/Alonso/Desktop/doc index.html\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E21415BE1D63E58100D9BD14 /* Sources */ = {
@@ -290,6 +324,20 @@
 			};
 			name = Release;
 		};
+		E29DE6331D6E746400D05F5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E29DE6341D6E746400D05F5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -307,6 +355,15 @@
 			buildConfigurations = (
 				E21415DA1D63E58100D9BD14 /* Debug */,
 				E21415DB1D63E58100D9BD14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E29DE6351D6E746400D05F5A /* Build configuration list for PBXAggregateTarget "DocDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29DE6331D6E746400D05F5A /* Debug */,
+				E29DE6341D6E746400D05F5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
